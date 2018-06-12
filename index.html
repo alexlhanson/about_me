@@ -2,9 +2,7 @@
 
     <head>
 
-        <title>
-            Alex About Me
-        </title>
+        <title>Alex About Me</title>
 
     </head>
 
@@ -12,28 +10,32 @@
 
         <h1>What is your name?</h1>
 
-        <h1>Where do you come from?</h1>
+        <p>Where do you come from?</p>
 
-        <h1>Where would you rather be?</h1>
+        <p>Where would you rather be?</p>
 
-        <h1>Why would you rather be there?</h1>
+        <p>Why would you rather be there?</p>
 
         <script>
-
+            //welcome
             alert ('Hello, welcome to my humble page');
         
+            //prompt and response for first question
             var username = prompt('What is your name?');
             console.log('What is your name? ; ' + username);
             alert ('Hi nice to meet you ' + username);
 
+            //prompt and response for second question
             var homeland = prompt('Where do you come from?');
             console.log('Where do you come from?; ' + homeland);
             alert ('So, ' + username + ', I really love ' + homeland);
 
+            //prompt and response for third question
             var where = prompt('Where would you rather be?');
             console.log('Where would you rather be?; ' + where);
             alert (username + ', I hear people from ' + homeland + 'would rather be at ' + where);
 
+            //prompt and response for fourth question
             var why = prompt('Why would you rather be there?');
             console.log('Why would you rather be there?; ' + why);
             alert (username + ', when I ask people from ' + where + ' . They say they would rather be at ' + homeland + ', because ' + why + '. So maybe the grass is just greener on the other side.')
