@@ -36,3 +36,14 @@ else  {alert('I am not a very smart program, please keep responses to yes/no y/n
 };
 
 //third question
+var superPower = prompt('Does Alex have super powers?');
+superPower = superPower.toLowerCase();
+console.log('?');
+if (superPower === 'y' || superPower === 'yes') {
+  alert('I do, my power is to get to a restaurant right before a big line starts');
+}
+else if (superPower === 'n' || superPower === 'no') {
+  alert('Actually, my power is to get to a restaurant right before a big line starts');
+}
+else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+};
