@@ -21,3 +21,18 @@ else if (language === 'n' || language === 'no') {
 }
 else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
 };
+
+//Second question
+var kids = prompt('Does Alex have wonderful little boys?');
+kids = kids.toLowerCase();
+console.log('Does Alex have wonderful little boys?');
+if (kids === 'y' || kids === 'yes') {
+  alert('Well done! They are 3 and 7.');
+}
+else if (kids === 'n' || kids === 'no') {
+  alert('Actually, I have two boys');
+}
+else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+};
+
+//third question
