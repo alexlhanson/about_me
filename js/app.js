@@ -7,7 +7,7 @@ alert('Hello and welcome! Let\'s get to know the nitty gritties of Alex');
 //prompt for a username
 var username = prompt('But to begin, what is your name?');
 console.log('What is your name? ; ' + username);
-alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know me');
+alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
 
 //Begin the guessing game
 var language = prompt('Does Alex also speak Spanish');
@@ -44,6 +44,19 @@ if (superPower === 'y' || superPower === 'yes') {
 }
 else if (superPower === 'n' || superPower === 'no') {
   alert('Actually, my power is to get to a restaurant right before a big line starts');
+}
+else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+};
+
+//fourth question
+var meatEater = prompt('Does Alex consume animal products?');
+meatEater = meatEater.toLowerCase();
+console.log('?');
+if (meatEater === 'y' || meatEater === 'yes') {
+  alert('Well kinda, he does consume dairy but he doesn\'t eat meat');
+}
+else if (meatEater === 'n' || meatEater === 'no') {
+  alert('Sorry, he is not that hardcore, he just doesn\'t eat meat');
 }
 else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
 };
