@@ -12,7 +12,7 @@ alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to 
 //Begin the guessing game
 var language = prompt('Does Alex also speak Spanish');
 language = language.toLowerCase();
-console.log('Does Alex Spanish?');
+console.log('Does Alex speak Spanish?; ' + language);
 if (language === 'y' || language === 'yes') {
   alert('Well done! You guessed correctly.');
 }
@@ -25,7 +25,7 @@ else  {alert('I am not a very smart program, please keep responses to yes/no y/n
 //Second question
 var kids = prompt('Does Alex have wonderful little boys?');
 kids = kids.toLowerCase();
-console.log('Does Alex have wonderful little boys?');
+console.log('Does Alex have wonderful little boys?; ' + kids);
 if (kids === 'y' || kids === 'yes') {
   alert('Well done! They are 3 and 7.');
 }
@@ -38,7 +38,7 @@ else  {alert('I am not a very smart program, please keep responses to yes/no y/n
 //third question
 var superPower = prompt('Does Alex have super powers?');
 superPower = superPower.toLowerCase();
-console.log('?');
+console.log('Does Alex have super powers?; ' + superPower);
 if (superPower === 'y' || superPower === 'yes') {
   alert('He does, his power is to get to a restaurant right before a big line starts');
 }
@@ -51,7 +51,7 @@ else  {alert('I am not a very smart program, please keep responses to yes/no y/n
 //fourth question
 var meatEater = prompt('Does Alex consume animal products?');
 meatEater = meatEater.toLowerCase();
-console.log('?');
+console.log('Does Alex consume animal products?; ' + meatEater);
 if (meatEater === 'y' || meatEater === 'yes') {
   alert('Well kinda, he does consume dairy, but he doesn\'t eat meat');
 }
@@ -64,7 +64,7 @@ else  {alert('I am not a very smart program, please keep responses to yes/no y/n
 //fifth question
 var lifeSaver = prompt('Has Alex saved the lives of hundreds?');
 lifeSaver = lifeSaver.toLowerCase();
-console.log('?');
+console.log('Has Alex saved lives?; ' + lifeSaver);
 if (lifeSaver === 'y' || lifeSaver === 'yes') {
   alert('Wow, you sure think highly of him. Maybe he has touched some hearts, but "saved hundreds of lives" is a tall order.');
 }
@@ -74,4 +74,5 @@ else if (lifeSaver === 'n' || lifeSaver === 'no') {
 else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
 };
 
-alert('Hopefully, you have learned a little more about what makes Alex tick');
+//Thanks for playing message
+alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
