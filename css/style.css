@@ -1,0 +1,30 @@
+* {font-family: 'Courier New' monospace
+  }
+
+body {
+  max-width: 75%;
+  margin: auto
+}
+
+header {
+  font-family: 'Franklin Gothic Medium';
+  font-size: 3em;
+}
+/* Class Selectors */
+
+li {
+  list-style-type: disc;
+}
+
+h1 {
+  color: rgb(28, 28, 218);
+  font-family: 'Trebuchet MS';
+  font-size: 2.5em;
+  line-height: 50px;
+  text-align: center;
+  }
+
+p {
+  line-height: 18px
+}
+
