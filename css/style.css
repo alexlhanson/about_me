@@ -1,14 +1,21 @@
-* {font-family: 'Courier New' monospace
+* {font-family: 'Courier New' monospace;
   }
 
 body {
-  max-width: 75%;
-  margin: auto
+  margin: auto;
+  text-align:center;
+  padding-right: 3em;
+  padding-left: 3em;
 }
 
 header {
   font-family: 'Franklin Gothic Medium';
   font-size: 3em;
+  color: rgb(43, 43, 206);
+  text-align: right;
+  background-color: lightsteelblue;
+  padding-bottom: 1.1em;
+  padding-top: 1em;
 }
 /* Class Selectors */
 
@@ -17,14 +24,61 @@ li {
 }
 
 h1 {
-  color: rgb(28, 28, 218);
+  color: black;
   font-family: 'Trebuchet MS';
   font-size: 2.5em;
-  line-height: 50px;
+  line-height: 1.25em;
   text-align: center;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding-top: 0.5em;
   }
 
 p {
   line-height: 18px
+}
+
+#headshot {
+  width: auto;
+  height: 2em;
+  float: left;
+}
+
+.position {
+  font-weight:bold;
+  font-style: italic;
+}
+
+.company {
+  font-weight:bold;
+}
+
+.dates {
+  font-weight:bold;
+  font-style: italic;
+  color: rgb(66, 66, 248)
+}
+
+#bio {
+  margin-top: 1em;
+}
+
+#goals {
+  padding-bottom: 2em;
+}
+
+#education {
+  padding-bottom: 2em;
+}
+
+.dark {
+  background-color: rgb(61, 70, 70);
+  color: white;
+
+}
+
+.light {
+  background-color: white;
+  }
 }
 
