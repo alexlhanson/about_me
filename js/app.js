@@ -24,7 +24,7 @@ function questionOne() {
     }
   } while (true);
 };
-questionOne();
+// questionOne();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionTwo() {
@@ -40,7 +40,7 @@ function questionTwo() {
   else {alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-questionTwo();
+// questionTwo();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionThree(){
@@ -56,7 +56,7 @@ function questionThree(){
   else {alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-questionThree();
+// questionThree();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionFour(){
@@ -72,7 +72,7 @@ function questionFour(){
   else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-questionFour();
+// questionFour();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionFive(){
@@ -88,7 +88,7 @@ function questionFive(){
   else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-questionFive();
+// questionFive();
 
 
 // create random number for question 6
@@ -130,7 +130,7 @@ function questionSix(){
     }
   }
 };
-questionSix();
+// questionSix();
 
 // Assign variables for 7th question
 function questionSeven(){
@@ -171,4 +171,15 @@ function questionSeven(){
   //Thanks for playing message
   alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
 };
-questionSeven();
+// questionSeven();
+
+function gameQuestions(){
+  questionOne();
+  questionTwo();
+  questionThree();
+  questionFour();
+  questionFive();
+  questionSix();
+  questionSeven();
+};
+gameQuestions();
