@@ -74,18 +74,22 @@ function questionFour(){
 };
 questionFour();
 
-// //checks if user prompt can get the y/n answer, but makes sure its y/n
-// var lifeSaver = prompt('Has Alex saved the lives of hundreds?');
-// lifeSaver = lifeSaver.toLowerCase();
-// console.log('Has Alex saved lives?; ' + lifeSaver);
-// if (lifeSaver === 'y' || lifeSaver === 'yes') {
-//   alert('Wow, you sure think highly of him. Maybe he has touched some hearts, but "saved hundreds of lives" is a tall order.');
-// }
-// else if (lifeSaver === 'n' || lifeSaver === 'no') {
-//   alert('You are clearly a realist.');
-// }
-// else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
-// };
+//checks if user prompt can get the y/n answer, but makes sure its y/n
+function questionFive(){
+  var lifeSaver = prompt('Has Alex saved the lives of hundreds?');
+  lifeSaver = lifeSaver.toLowerCase();
+  console.log('Has Alex saved lives?; ' + lifeSaver);
+  if (lifeSaver === 'y' || lifeSaver === 'yes') {
+    alert('Wow, you sure think highly of him. Maybe he has touched some hearts, but "saved hundreds of lives" is a tall order.');
+  }
+  else if (lifeSaver === 'n' || lifeSaver === 'no') {
+    alert('You are clearly a realist.');
+  }
+  else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+  };
+};
+questionFive();
+
 
 // // create random number for question 6
 // var myMin = 1;
