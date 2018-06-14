@@ -6,6 +6,7 @@ body {
   text-align:center;
   padding-right: 3em;
   padding-left: 3em;
+  max-width: 960px;
 }
 
 header {
@@ -17,10 +18,17 @@ header {
   padding-bottom: 1.1em;
   padding-top: 1em;
 }
-/* Class Selectors */
 
-li {
+/* Broad selectors*/
+
+ul {
   list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+  text-align: center;
+  list-style: decimal inside;
 }
 
 h1 {
@@ -37,6 +45,8 @@ h1 {
 p {
   line-height: 18px
 }
+
+/* Specific Selectors*/
 
 #headshot {
   width: auto;
@@ -79,6 +89,6 @@ p {
 
 .light {
   background-color: white;
-  }
 }
+
 
