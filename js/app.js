@@ -8,11 +8,7 @@ var username = prompt('But to begin, what is your name?');
 console.log('What is your name? ; ' + username);
 alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
 
-checks if user prompt can get the y/n answer, but makes sure its y/n
-var language = prompt('Does Alex also speak Spanish');
-language = language.toLowerCase();
-console.log('Does Alex speak Spanish?; ' + language);
-
+//
 do {
   var language = prompt('Does Alex also speak Spanish').toLowerCase();
   if (language === 'y' || language === 'yes') {
@@ -144,5 +140,12 @@ while (aniGuesses < 6) {
   } 
   alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
 }
-Thanks for playing message
+//loops through favAnimals array to state the list of animals in a string
+var animals = 'my favorite animals are: ';
+for (var animal = 0; animal < favAnimals.length; animal++){
+  animals = (animals + favAnimals[animal] + ', ');
+}
+alert(animals);
+
+//Thanks for playing message
 alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
