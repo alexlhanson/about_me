@@ -133,40 +133,42 @@ function questionSix(){
 questionSix();
 
 // Assign variables for 7th question
-
-var favAnimals = ['duck-billed platypus', 'lemur', 'raven', 'hydra', 'dog'];
-var aniGuesses = 0;
-var aniIdeas;
-var trueGuess = false;
-
-// This while loop checks if a prompted animal is in my array favAnimals
-while (aniGuesses < 6) {
-  aniIdeas = prompt('Can you guess one of my favorite animals?');
-
-  for (var i = 0; i < favAnimals.length; i++){
-    if (aniIdeas === favAnimals[i]){
-      trueGuess = true;
+function questionSeven(){
+  var favAnimals = ['duck-billed platypus', 'lemur', 'raven', 'hydra', 'dog'];
+  var aniGuesses = 0;
+  var aniIdeas;
+  var trueGuess = false;
+  
+  // This while loop checks if a prompted animal is in my array favAnimals
+  while (aniGuesses < 6) {
+    aniIdeas = prompt('Can you guess one of my favorite animals?');
+  
+    for (var i = 0; i < favAnimals.length; i++){
+      if (aniIdeas === favAnimals[i]){
+        trueGuess = true;
+      }
     }
+  
+    if (trueGuess === true){
+      alert('Good guessing, you got it right!');
+      break;
+    }
+  
+    aniGuesses++;
+    if (aniGuesses === 6){
+      alert('Sorry, you are out of guesses');
+      break;
+    } 
+    alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
   }
-
-  if (trueGuess === true){
-    alert('Good guessing, you got it right!');
-    break;
+  //loops through favAnimals array to state the list of animals in a string
+  var animals = 'my favorite animals are: ';
+  for (var animal = 0; animal < favAnimals.length; animal++){
+    animals = (animals + favAnimals[animal] + ', ');
   }
-
-  aniGuesses++;
-  if (aniGuesses === 6){
-    alert('Sorry, you are out of guesses');
-    break;
-  } 
-  alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
-}
-//loops through favAnimals array to state the list of animals in a string
-var animals = 'my favorite animals are: ';
-for (var animal = 0; animal < favAnimals.length; animal++){
-  animals = (animals + favAnimals[animal] + ', ');
-}
-alert(animals);
-
-//Thanks for playing message
-alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
+  alert(animals);
+  
+  //Thanks for playing message
+  alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
+};
+questionSeven();
