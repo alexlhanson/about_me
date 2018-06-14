@@ -1,20 +1,25 @@
 'use strict';
 
 
-// //welcome message
-// alert('Hello and welcome! Let\'s get to know the nitty gritties of Alex');
+//welcome message
+alert('Hello and welcome! Let\'s get to know the nitty gritties of Alex');
 
-// //prompt for a username
-// var username = prompt('But to begin, what is your name?');
-// console.log('What is your name? ; ' + username);
-// alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
+//prompt for a username
+var username = prompt('But to begin, what is your name?');
+console.log('What is your name? ; ' + username);
+alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
 
-//
+
+//global variable for questions guessed correctly
+var correctGuesses = 0;
+
+//This is my first question
 function questionOne() {
   do {
     var language = prompt('Does Alex also speak Spanish').toLowerCase();
     if (language === 'y' || language === 'yes') {
       alert('Well done! You guessed correctly.');
+      correctGuesses = (correctGuesses + 1);
       break;
     } else if (language === 'n' || language === 'no') {
       alert('Actually, I learned to speak it in South America.');
@@ -24,7 +29,6 @@ function questionOne() {
     }
   } while (true);
 };
-// questionOne();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionTwo() {
@@ -33,6 +37,7 @@ function questionTwo() {
   console.log('Does Alex have wonderful little boys?; ' + kids);
   if (kids === 'y' || kids === 'yes') {
     alert('Well done! They are 3 and 7.');
+    correctGuesses = (correctGuesses + 1);
   }
   else if (kids === 'n' || kids === 'no') {
     alert('Actually, he has two boys');
@@ -49,6 +54,7 @@ function questionThree(){
   console.log('Does Alex have super powers?; ' + superPower);
   if (superPower === 'y' || superPower === 'yes') {
     alert('He does, his power is to get to a restaurant right before a big line starts');
+    correctGuesses = (correctGuesses + 1);
   }
   else if (superPower === 'n' || superPower === 'no') {
     alert('Actually, his power is to get to a restaurant right before a big line starts');
@@ -65,6 +71,7 @@ function questionFour(){
   console.log('Does Alex consume animal products?; ' + meatEater);
   if (meatEater === 'y' || meatEater === 'yes') {
     alert('Well kinda, he does consume dairy, but he doesn\'t eat meat');
+    correctGuesses = (correctGuesses + 1);
   }
   else if (meatEater === 'n' || meatEater === 'no') {
     alert('Sorry, he is not that hardcore, he just doesn\'t eat meat');
@@ -84,6 +91,7 @@ function questionFive(){
   }
   else if (lifeSaver === 'n' || lifeSaver === 'no') {
     alert('You are clearly a realist.');
+    correctGuesses = (correctGuesses + 1);
   }
   else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
@@ -94,7 +102,7 @@ function questionFive(){
 // create random number for question 6
 function questionSix(){
   var myMin = 1;
-  var myMax = 2;
+  var myMax = 20;
   var randomNum = Math.random();
   var randomNumber = (Math.floor(randomNum * ( myMax - myMin + 1)) + myMin);
   console.log(randomNumber);
@@ -124,6 +132,7 @@ function questionSix(){
     }else if (numberGuess == randomNumber){
       alert('Nice, you guessed correctly');
       console.log('Nice, you guessed correctly');
+      correctGuesses = (correctGuesses + 1);
       break;
     }else {
       alert('Why don\'t you give it another shot. You have ' + (4 - guesses) + ' left');
@@ -151,6 +160,7 @@ function questionSeven(){
   
     if (trueGuess === true){
       alert('Good guessing, you got it right!');
+      correctGuesses = (correctGuesses + 1);
       break;
     }
   
@@ -181,5 +191,6 @@ function gameQuestions(){
   questionFive();
   questionSix();
   questionSeven();
+  alert('Great job! You guessed ' + correctGuesses + ' out of 7 correctly!');
 };
 gameQuestions();
