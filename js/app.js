@@ -91,78 +91,82 @@ function questionFive(){
 questionFive();
 
 
-// // create random number for question 6
-// var myMin = 1;
-// var myMax = 2;
-// var randomNum = Math.random();
-// var randomNumber = (Math.floor(randomNum * ( myMax - myMin + 1)) + myMin);
-// console.log(randomNumber);
+// create random number for question 6
+function questionSix(){
+  var myMin = 1;
+  var myMax = 2;
+  var randomNum = Math.random();
+  var randomNumber = (Math.floor(randomNum * ( myMax - myMin + 1)) + myMin);
+  console.log(randomNumber);
+  
+  // Assign variables for 6th question
+  var numberGuess;
+  var guesses = 0;
+  
+  // This while loop checks if prompt value is my randomNumber
+  while (guesses < 4){
+    numberGuess = prompt('Guess a number between 1 and 20. Hint: keep it to integers');
+    console.log(numberGuess);
+  
+    if (numberGuess > randomNumber){
+      alert('Try something a little lower');
+      console.log('Try something a little lower');
+    } else if (numberGuess < randomNumber){
+      alert('Try something a little higher');
+      console.log('Try something a little higher');
+  
+    } guesses++;
+    console.log(guesses);
+  
+    if (guesses === 4){
+      alert('Sorry, you are out of guesses');
+      console.log('Sorry, you are out of guesses');
+    }else if (numberGuess == randomNumber){
+      alert('Nice, you guessed correctly');
+      console.log('Nice, you guessed correctly');
+      break;
+    }else {
+      alert('Why don\'t you give it another shot. You have ' + (4 - guesses) + ' left');
+    }
+  }
+};
+questionSix();
 
-// // Assign variables for 6th question
-// var numberGuess;
-// var guesses = 0;
+// Assign variables for 7th question
 
-// // This while loop checks if prompt value is my randomNumber
-// while (guesses < 4){
-//   numberGuess = prompt('Guess a number between 1 and 20. Hint: keep it to integers');
-//   console.log(numberGuess);
+var favAnimals = ['duck-billed platypus', 'lemur', 'raven', 'hydra', 'dog'];
+var aniGuesses = 0;
+var aniIdeas;
+var trueGuess = false;
 
-//   if (numberGuess > randomNumber){
-//     alert('Try something a little lower');
-//     console.log('Try something a little lower');
-//   } else if (numberGuess < randomNumber){
-//     alert('Try something a little higher');
-//     console.log('Try something a little higher');
+// This while loop checks if a prompted animal is in my array favAnimals
+while (aniGuesses < 6) {
+  aniIdeas = prompt('Can you guess one of my favorite animals?');
 
-//   } guesses++;
-//   console.log(guesses);
+  for (var i = 0; i < favAnimals.length; i++){
+    if (aniIdeas === favAnimals[i]){
+      trueGuess = true;
+    }
+  }
 
-//   if (guesses === 4){
-//     alert('Sorry, you are out of guesses');
-//     console.log('Sorry, you are out of guesses');
-//   }else if (numberGuess == randomNumber){
-//     alert('Nice, you guessed correctly');
-//     console.log('Nice, you guessed correctly');
-//     break;
-//   }else {
-//     alert('Why don\'t you give it another shot. You have ' + (4 - guesses) + ' left');
-//   }
-// }
+  if (trueGuess === true){
+    alert('Good guessing, you got it right!');
+    break;
+  }
 
-// // Assign variables for 7th question
-// var favAnimals = ['duck-billed platypus', 'lemur', 'raven', 'hydra', 'dog'];
-// var aniGuesses = 0;
-// var aniIdeas;
-// var trueGuess = false;
+  aniGuesses++;
+  if (aniGuesses === 6){
+    alert('Sorry, you are out of guesses');
+    break;
+  } 
+  alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
+}
+//loops through favAnimals array to state the list of animals in a string
+var animals = 'my favorite animals are: ';
+for (var animal = 0; animal < favAnimals.length; animal++){
+  animals = (animals + favAnimals[animal] + ', ');
+}
+alert(animals);
 
-// // This while loop checks if a prompted animal is in my array favAnimals
-// while (aniGuesses < 6) {
-//   aniIdeas = prompt('Can you guess one of my favorite animals?');
-
-//   for (var i = 0; i < favAnimals.length; i++){
-//     if (aniIdeas === favAnimals[i]){
-//       trueGuess = true;
-//     }
-//   }
-
-//   if (trueGuess === true){
-//     alert('Good guessing, you got it right!');
-//     break;
-//   }
-
-//   aniGuesses++;
-//   if (aniGuesses === 6){
-//     alert('Sorry, you are out of guesses');
-//     break;
-//   } 
-//   alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
-// }
-// //loops through favAnimals array to state the list of animals in a string
-// var animals = 'my favorite animals are: ';
-// for (var animal = 0; animal < favAnimals.length; animal++){
-//   animals = (animals + favAnimals[animal] + ', ');
-// }
-// alert(animals);
-
-// //Thanks for playing message
-// alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
+//Thanks for playing message
+alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
