@@ -4,15 +4,30 @@
 //welcome message
 alert('Hello and welcome! Let\'s get to know the nitty gritties of Alex');
 
-//prompt for a username
-var username = prompt('But to begin, what is your name?');
-console.log('What is your name? ; ' + username);
-alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
-
-
-//global variable for questions guessed correctly
+//global variable for questions game
+var username
+// questions = ['Does Alex Speak Spanish?', ''];
+// correctAnswer = [1, 1, 1, 1, 0];
+// possibleAnswer = [['n', 'no'], ['yes', 'y']];
 var correctGuesses = 0;
 
+function gameQuestions() {
+
+  var username = prompt('But to begin, what is your name?');
+  //prompt for a username
+  console.log('What is your name? ; ' + username);
+  alert('Hi, nice to meet you ' + username + '. This is a guessing game to get to know Alex');
+  //calls question functions
+  questionOne();
+  questionTwo();
+  questionThree();
+  questionFour();
+  questionFive();
+  questionSix();
+  questionSeven();
+  alert('Great job! You guessed ' + correctGuesses + ' out of 7 correctly!');
+};
+gameQuestions();
 //This is my first question
 function questionOne() {
   do {
@@ -32,9 +47,15 @@ function questionOne() {
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
 function questionTwo() {
-  var kids = prompt('Does Alex have wonderful little boys?');
-  kids = kids.toLowerCase();
+  var kids = prompt('Does Alex have wonderful little boys?').toLowerCase();
   console.log('Does Alex have wonderful little boys?; ' + kids);
+  var wrongType = true;
+
+  while (wrongType === true) {
+    if (kids === 'y' || kids === 'n' || kids === 'yes' || kids === 'no') {
+      wrongType = false;
+    } else (alert('I am not a very smart program, please keep responses to yes/no or y/n.'));
+  };
   if (kids === 'y' || kids === 'yes') {
     alert('Well done! They are 3 and 7.');
     correctGuesses = (correctGuesses + 1);
@@ -42,13 +63,11 @@ function questionTwo() {
   else if (kids === 'n' || kids === 'no') {
     alert('Actually, he has two boys');
   }
-  else {alert('I am not a very smart program, please keep responses to yes/no y/n.');
-  };
 };
-// questionTwo();
+
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
-function questionThree(){
+function questionThree() {
   var superPower = prompt('Does Alex have super powers?');
   superPower = superPower.toLowerCase();
   console.log('Does Alex have super powers?; ' + superPower);
@@ -59,13 +78,13 @@ function questionThree(){
   else if (superPower === 'n' || superPower === 'no') {
     alert('Actually, his power is to get to a restaurant right before a big line starts');
   }
-  else {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+  else {
+    alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-// questionThree();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
-function questionFour(){
+function questionFour() {
   var meatEater = prompt('Does Alex consume animal products?');
   meatEater = meatEater.toLowerCase();
   console.log('Does Alex consume animal products?; ' + meatEater);
@@ -76,13 +95,13 @@ function questionFour(){
   else if (meatEater === 'n' || meatEater === 'no') {
     alert('Sorry, he is not that hardcore, he just doesn\'t eat meat');
   }
-  else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+  else {
+    alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-// questionFour();
 
 //checks if user prompt can get the y/n answer, but makes sure its y/n
-function questionFive(){
+function questionFive() {
   var lifeSaver = prompt('Has Alex saved the lives of hundreds?');
   lifeSaver = lifeSaver.toLowerCase();
   console.log('Has Alex saved lives?; ' + lifeSaver);
@@ -93,104 +112,90 @@ function questionFive(){
     alert('You are clearly a realist.');
     correctGuesses = (correctGuesses + 1);
   }
-  else  {alert('I am not a very smart program, please keep responses to yes/no y/n.');
+  else {
+    alert('I am not a very smart program, please keep responses to yes/no y/n.');
   };
 };
-// questionFive();
-
 
 // create random number for question 6
-function questionSix(){
+function questionSix() {
   var myMin = 1;
   var myMax = 20;
   var randomNum = Math.random();
-  var randomNumber = (Math.floor(randomNum * ( myMax - myMin + 1)) + myMin);
+  var randomNumber = (Math.floor(randomNum * (myMax - myMin + 1)) + myMin);
   console.log(randomNumber);
-  
+
   // Assign variables for 6th question
   var numberGuess;
   var guesses = 0;
-  
+
   // This while loop checks if prompt value is my randomNumber
-  while (guesses < 4){
+  while (guesses < 4) {
     numberGuess = prompt('Guess a number between 1 and 20. Hint: keep it to integers');
     console.log(numberGuess);
-  
-    if (numberGuess > randomNumber){
+
+    if (numberGuess > randomNumber) {
       alert('Try something a little lower');
       console.log('Try something a little lower');
-    } else if (numberGuess < randomNumber){
+    } else if (numberGuess < randomNumber) {
       alert('Try something a little higher');
       console.log('Try something a little higher');
-  
+
     } guesses++;
     console.log(guesses);
-  
-    if (guesses === 4){
+
+    if (guesses === 4) {
       alert('Sorry, you are out of guesses');
       console.log('Sorry, you are out of guesses');
-    }else if (numberGuess == randomNumber){
+    } else if (numberGuess == randomNumber) {
       alert('Nice, you guessed correctly');
       console.log('Nice, you guessed correctly');
       correctGuesses = (correctGuesses + 1);
       break;
-    }else {
+    } else {
       alert('Why don\'t you give it another shot. You have ' + (4 - guesses) + ' left');
     }
   }
 };
-// questionSix();
 
 // Assign variables for 7th question
-function questionSeven(){
+function questionSeven() {
   var favAnimals = ['duck-billed platypus', 'lemur', 'raven', 'hydra', 'dog'];
   var aniGuesses = 0;
   var aniIdeas;
   var trueGuess = false;
-  
+
   // This while loop checks if a prompted animal is in my array favAnimals
   while (aniGuesses < 6) {
-    aniIdeas = prompt('Can you guess one of my favorite animals?');
-  
-    for (var i = 0; i < favAnimals.length; i++){
-      if (aniIdeas === favAnimals[i]){
+    aniIdeas = prompt('Can you guess one of my favorite animals?').toLowerCase();
+
+    for (var i = 0; i < favAnimals.length; i++) {
+      if (aniIdeas === favAnimals[i]) {
         trueGuess = true;
       }
     }
-  
-    if (trueGuess === true){
+
+    if (trueGuess === true) {
       alert('Good guessing, you got it right!');
       correctGuesses = (correctGuesses + 1);
       break;
     }
-  
+
     aniGuesses++;
-    if (aniGuesses === 6){
+    if (aniGuesses === 6) {
       alert('Sorry, you are out of guesses');
       break;
-    } 
+    }
     alert('Almost, why don\'t you try again. You have ' + (6 - aniGuesses) + ' guesses left');
   }
   //loops through favAnimals array to state the list of animals in a string
   var animals = 'my favorite animals are: ';
-  for (var animal = 0; animal < favAnimals.length; animal++){
+
+  for (var animal = 0; animal < favAnimals.length; animal++) {
     animals = (animals + favAnimals[animal] + ', ');
   }
   alert(animals);
-  
+
   //Thanks for playing message
   alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
 };
-// questionSeven();
-
-function gameQuestions(){
-  questionOne();
-  questionTwo();
-  questionThree();
-  questionFour();
-  questionFive();
-  questionSix();
-  questionSeven();
-  alert('Great job! You guessed ' + correctGuesses + ' out of 7 correctly!');
-};
-gameQuestions();
