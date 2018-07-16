@@ -199,3 +199,4 @@ function questionSeven() {
   //Thanks for playing message
   alert('Thanks for playing. Hopefully, you have learned a little more about what makes Alex tick');
 };
+ 
